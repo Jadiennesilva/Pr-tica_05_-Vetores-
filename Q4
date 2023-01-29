@@ -1,0 +1,38 @@
+//*  Crie um aplicativo em C que peça um número inicial ao usuário, uma razão e calcule os termos de uma P.G (Progressão Geométrica), armazenando esses valores em um vetor de tamanho 10.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+	int P_G[10];
+	int RAZAO, J;
+	
+	setlocale(LC_ALL,"portuguese_brazil");
+	
+    printf("VAMOS CRIAR UM APLICATIVO EM C\n");
+	
+	printf("QUAL VALOR INICIAL DA P.G QUE VC DESEJA: ");
+	scanf("%d", &P_G[0]);
+	
+	printf("QUAL É A RAZÃO DA P.G:");
+	scanf("%d", &RAZAO);
+	
+	printf("vamos cacular os termos da progresão geométrica \n");
+
+	
+	for(J=1; J < 10; J++){
+		P_G[J]= P_G[J-1] + RAZAO;
+	}
+	
+	    printf("QUAL O VALOR DA SUA SUA P.G: \n");
+	
+	
+	for(J=0; J < 10; J++){
+		printf("%d ",P_G[J]);
+	}
+	
+	
+	return 0;
+}
+
