@@ -1,0 +1,57 @@
+ //* Crie um aplicativo em C que peça um número inicial ao usuário, uma razão e calcule os termos de uma P.A (Progressão Aritmética), armazenando esses valores em um vetor de tamanho 10.
+ 
+ 
+ 
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+	int P_A[10];
+	int RAZ, J;
+	
+	setlocale(LC_ALL,"portuguese_brazil");
+	
+    printf("VAMOS CRIAR UM APLICATIVO EM C\n");
+	
+	printf("QUAL VALOR INICIAL DA P.A QUE VC DESEJA: ");
+	scanf("%d", &P_A[0]);
+	
+	printf("QUAL É A RAZÃO DA P.A:");
+	scanf("%d", &RAZ);
+	
+	printf("vamos cacular os termos da progresão aritmética \n");
+
+	
+	for(J=1; J < 10; J++){
+		P_A[J]= P_A[J-1] + RAZ;
+	}
+	
+	    printf("QUAL O VALOR DA SUA SUA P.A: \n");
+	
+	
+	for(J=0; J < 10; J++){
+		printf("%d ",P_A[J]);
+	}
+	
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
