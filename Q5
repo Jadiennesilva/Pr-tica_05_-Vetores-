@@ -1,0 +1,39 @@
+//* Escreve um programa que sorteio, aleatoriamente, 10 números e armazene estes em um vetor.
+//Em seguida, o usuário digita um número e seu programa em C deve acusar se o número digitado está no vetor ou não. Se estiver, diga a posição que está.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <time.h>
+
+int main() {
+   
+    int VETOR[10];
+    int NUMERO, j;
+    srand(time(NULL));
+    
+    	setlocale(LC_ALL,"portuguese_brazil");
+    
+
+    for(j= 0; j < 10; j++) {
+        VETOR[j] = rand() % 100; 
+    }
+
+    printf("INFORME UM NuMERO QUE VC DESEJA: ");
+    scanf("%d", &NUMERO);
+
+    if (VETOR[j] == NUMERO) {
+            printf("O NUMERO DESEJADO %d ESTAR NO VETOR %d\n", NUMERO, j);
+            
+            
+            return 0;
+        }
+    
+    
+    
+    printf("O NUMERO DESEJADO %d NÃO ESTAR NO VETOR \n", NUMERO);
+    
+    return 0;
+}
